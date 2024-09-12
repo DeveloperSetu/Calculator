@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator using Js</title>
+    <style>
+        #calculatorParentDiv{
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+        }
+        #calculator{
+           background: white;
+           width: 400px;
+           height: 400px;
+           padding: 30px;
+           border-radius: 10px;
+           box-shadow: 5px 5px 10px gray;
+        }
+        #inputAreaContainer{
+            display: flex;
+            justify-content: center;
+        }
+        #inputArea{
+            width: 340px;
+            height: 30px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            border: 3px solid gray;
+            margin: 5px;
+        }
+
+        button{
+            height: 60px;
+            width: 70px;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 5px;
+            background: #8200a6;
+            color: white;
+            border-radius: 4px;
+            border: none;
+        }
+        #buttonContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+</style>
+</head>
+<body>
+<div>
+    
+    <div id="calculatorParentDiv">
+    <div id="calculator">
+        <div id="inputAreaContainer">
+            <input type="text" id="inputArea" placeholder="0" readonly>
+        </div><br>
+    
+      <div id="buttonContainer">
+        <div>
+            <button id="btn1" value="1" onclick="document.getElementById('inputArea').value += 1 ">1</button>
+            <button id="btn2" value="2" onclick="document.getElementById('inputArea').value += 2 " >2</button>
+            <button id="btn3" value="3" onclick="document.getElementById('inputArea').value += 3 ">3</button>
+            <button id="btn4" value="4" onclick="document.getElementById('inputArea').value += 4 ">4</button><br>
+            <button id="btn5" value="5" onclick="document.getElementById('inputArea').value += 5 ">5</button>
+            <button id="btn6" value="6" onclick="document.getElementById('inputArea').value += 6 ">6</button>
+            <button id="btn7" value="7" onclick="document.getElementById('inputArea').value += 7 ">7</button>
+            <button id="btn8" value="8" onclick="document.getElementById('inputArea').value += 8 ">8</button><br>
+            <button id="btn9" value="9" onclick="document.getElementById('inputArea').value += 9 ">9</button>
+            <button id="btn10" value="+" onclick="document.getElementById('inputArea').value += '+' ">+</button>
+            <button id="btn11" value="-" onclick="document.getElementById('inputArea').value += '-' ">-</button>
+            <button id="btn12" value="*" onclick="document.getElementById('inputArea').value += '*' ">*</button><br>
+            <button id="btn13" value="/" onclick="document.getElementById('inputArea').value += '/' ">/</button>
+            <button id="btn+14" value="0" onclick="document.getElementById('inputArea').value += '0' ">0</button>
+            <button id="btn15" value="C" onclick="document.getElementById('inputArea').value = ' ' ">C</button>
+            <button id="btn16" value="=" onclick="calculator()">=</button>
+          </div>
+      </div>
+    </div>
+</div>
+</div>
+
+<a href="developersetu.xyz"><img src="developer.png" alt="">code by setu</a>
+<script>
+   function calculator(){
+        var result = document.getElementById('inputArea');
+        result.value = eval(result.value);
+    }
+</script>
+</body>
+</html>
